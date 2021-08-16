@@ -1,0 +1,36 @@
+DROP TABLE orders;
+DROP TABLE menu;
+DROP TABLE store;
+DROP TABLE customer;
+
+CREATE TABLE CUSTOMER (
+       id			VARCHAR2(50) PRIMARY KEY,
+       name		VARCHAR2(50) NOT NULL,
+       phone		VARCHAR2(200) NOT NULL,
+       address		VARCHAR2(200) NOT NULL
+);
+CREATE TABLE STORE (
+       storeName		VARCHAR2(200) PRIMARY KEY,
+       storeAddress		VARCHAR2(200) NOT NULL,
+       storePhone		VARCHAR2(200) NOT NULL
+);
+CREATE TABLE MENU (
+       menuName		VARCHAR2(50) PRIMARY KEY,
+       menuPrice		NUMBER(10) NOT NULL,
+       storeName		VARCHAR2(200) NOT NULL
+);
+CREATE TABLE ORDERS (
+       order_no		NUMBER(5) PRIMARY KEY,
+       id			VARCHAR2(50) NOT NULL,
+       storeName		VARCHAR2(200) NOT NULL,
+       menuName		VARCHAR2(200) NOT NULL,
+       payMethod		VARCHAR2(200) NOT NULL
+);
+
+
+ALTER TABLE ORDERS  ADD FOREIGN KEY (id) REFERENCES customer(id);
+ALTER TABLE ORDERS  ADD FOREIGN KEY (storeName) REFERENCES store(storeName);
+ALTER TABLE ORDERS  ADD FOREIGN KEY (menuName) REFERENCES menu(menuName);
+ALTER TABLE MENU  ADD FOREIGN KEY (storeName) REFERENCES store(storeName);
+
+COMMIT;

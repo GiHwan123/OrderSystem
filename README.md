@@ -7,7 +7,7 @@
 </br>
 
 # 1. Data Modeling
-** 기환님이 그려주신 파일이 안열려서 제가 못 넣었어요ㅜ
+![ERD](https://user-images.githubusercontent.com/57335699/129515004-fef085b2-e5a5-44e6-b9e5-9f7155d850b1.PNG)
 </br>
 
 # 2. SQL

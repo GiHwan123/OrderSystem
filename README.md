@@ -17,8 +17,12 @@ DROP TABLE orders;
 DROP TABLE menu;
 DROP TABLE store;
 DROP TABLE customer;
-** 오더테이블 관련 시퀀스 삭제
-** 오더테이블 관련 시퀀스 생성
+
+CREATE SEQUENCE order_seq
+MAXVALUE 5000
+MINVALUE 4;
+
+SELECT order_seq.nextval FROM dual;
 
 CREATE TABLE CUSTOMER (
        id            VARCHAR2(50) PRIMARY KEY,

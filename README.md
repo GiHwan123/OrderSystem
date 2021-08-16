@@ -21,27 +21,27 @@ DROP TABLE customer;
 ** 오더테이블 관련 시퀀스 생성
 
 CREATE TABLE CUSTOMER (
-       id			VARCHAR2(50) PRIMARY KEY,
-       name		VARCHAR2(50) NOT NULL,
-       phone		VARCHAR2(200) NOT NULL,
-       address		VARCHAR2(200) NOT NULL
+       id            VARCHAR2(50) PRIMARY KEY,
+       name          VARCHAR2(50) NOT NULL,
+       phone         VARCHAR2(200) NOT NULL,
+       address       VARCHAR2(200) NOT NULL
 );
 CREATE TABLE STORE (
-       storeName		VARCHAR2(200) PRIMARY KEY,
-       storeAddress		VARCHAR2(200) NOT NULL,
-       storePhone		VARCHAR2(200) NOT NULL
+       storeName     VARCHAR2(200) PRIMARY KEY,
+       storeAddress  VARCHAR2(200) NOT NULL,
+       storePhone    VARCHAR2(200) NOT NULL
 );
 CREATE TABLE MENU (
-       menuName		VARCHAR2(50) PRIMARY KEY,
-       menuPrice		NUMBER(10) NOT NULL,
-       storeName		VARCHAR2(200) NOT NULL
+       menuName      VARCHAR2(50) PRIMARY KEY,
+       menuPrice     NUMBER(10) NOT NULL,
+       storeName     VARCHAR2(200) NOT NULL
 );
 CREATE TABLE ORDERS (
-       order_no		NUMBER(5) PRIMARY KEY,
-       id			VARCHAR2(50) NOT NULL,
-       storeName		VARCHAR2(200) NOT NULL,
-       menuName		VARCHAR2(200) NOT NULL,
-       payMethod		VARCHAR2(200) NOT NULL
+       order_no      NUMBER(5) PRIMARY KEY,
+       id            VARCHAR2(50) NOT NULL,
+       storeName     VARCHAR2(200) NOT NULL,
+       menuName      VARCHAR2(200) NOT NULL,
+       payMethod     VARCHAR2(200) NOT NULL
 );
 
 
